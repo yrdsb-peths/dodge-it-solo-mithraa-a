@@ -1,19 +1,27 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class sceneryTree here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class sceneryTree extends Actor
 {
-    /**
-     * Act - do whatever the sceneryTree wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
-        // Add your action code here.
+         move(-7);
+         
+         if(getX() <=0)
+         {
+             resetPet();
+         }
+    }
+    
+    public void resetPet()
+    {
+        int num = Greenfoot.getRandomNumber(2);
+        if (num == 0)
+        {
+            setLocation(589, 590);
+        }
+        else 
+        {
+            setLocation(580, 580);
+        }
     }
 }
